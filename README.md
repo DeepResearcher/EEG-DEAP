@@ -1,6 +1,6 @@
 EEG Emotion Recognition using Time Domain, Frequency Domain and Time-Frequency Domain Features and Classification 
 
-###########################################################################################
+####################################################################################
 Time Domain Features: 
 
 Statistics
@@ -15,7 +15,7 @@ Time - Frequency Domain Features:
 
 Hilbert-Huang Transform 
 Wavelet
-############################################################################################
+#####################################################################################
 Classification Criteria: 1
 
 Valence
@@ -27,7 +27,7 @@ Classification Criteria: 2
 Alpha
 Beta
 Gamma
-############################################################################################
+####################################################################################
 
 Dataset: DB-Deap-Mara
 
