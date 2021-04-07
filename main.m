@@ -1,15 +1,15 @@
-%% Yol = Veri stinin yolunu tutan deðisken,
-%% Burada deðiþtiriniz :
-%% 1.) Adým EEG Bantlarýna Ayýrma => Alpha , Beta , Gamma.
+%% Yol = Veri stinin yolunu tutan deÃ°isken,
+%% Burada deÃ°iÃ¾tiriniz :
+%% 1.) AdÃ½m EEG BantlarÃ½na AyÃ½rma => Alpha , Beta , Gamma.
 Yol = "C:\Users\serha\Desktop\DeapDataset Calismasi\DB_DEAP_MARA.mat";
 load(Yol);
 mkdir ('Sonuclar');
 cd 'C:\Users\serha\Desktop\DeapDataset Calismasi\Algoritmalar' ;
 [Alpha,Beta,Gamma] = FiltreUygula(veriDEAPMARA);
-%% Bu Adýmdan sonra Alpha , Beta ve Gamma'yý Sonuclar klasörüne kaydediyoruz
-%% Birinci Adým Tamamlandý.
+%% Bu AdÃ½mdan sonra Alpha , Beta ve Gamma'yÃ½ Sonuclar klasÃ¶rÃ¼ne kaydediyoruz
+%% Birinci AdÃ½m TamamlandÃ½.
 ------------------------------------------------------------------------------
-%% 2.) Adým => Özniteliklerin çýkarýlmasý ve Normalizasyon
+%% 2.) AdÃ½m => Ã–zniteliklerin Ã§Ã½karÃ½lmasÃ½ ve Normalizasyon
 %% Time Features:  (Alpha Beta Gamma)
 cd 'C:\Users\serha\Desktop\DeapDataset Calismasi\Sonuclar' ;
 load(Alpha.mat);
@@ -34,8 +34,8 @@ Time_Frequency_Alpha = [ zscore(WT_numeric(Alpha)) zscore(HJRTH(HHT_Alpha)) zsco
 Time_Frequency_Beta = [ zscore(WT_numeric(Beta)) zscore(HJRTH(HHT_Beta)) zscore(Statistics(HHT_Beta)) zscore(WT_numeric(HHT_Beta)) ];
 Time_Frequency_Gamma = [ zscore(WT_numeric(Gamma)) zscore(HJRTH(HHT_Gamma)) zscore(Statistics(HHT_Gamma)) zscore(WT_numeric(HHT_Gamma)) ];
 
-%% 3.) Adým : 
-%% Binary Deðerlerin Hesaplanmasý => V - A - D
+%% 3.) AdÃ½m : 
+%% Binary DeÃ°erlerin HesaplanmasÃ½ => V - A - D
 Valence = zeros(1280,1);
 for i = 1 : 1280
     deger(i,1) = veriDEAPMARA(i).valence;
@@ -69,7 +69,7 @@ for i = 1 : 1280
     end
 end
 
-%% Binary Deðerleri Matrise Burada Ekliyoruz : 
+%% Binary DeÃ°erleri Matrise Burada Ekliyoruz : 
 %% Frequency Features With Nominal :
 
 Frequency_Features_Alpha = [ Frequency_Features_Alpha Valence ];
