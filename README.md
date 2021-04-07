@@ -1,1 +1,1 @@
-# Firstly we run calistir.m file
+EEG Emotion Recognition using Time Domain, Frequency Domain and Time-Frequency Domain Features and Classification 
